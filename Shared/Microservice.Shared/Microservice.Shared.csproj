@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="BaseResults\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BaseResults\" />
+  </ItemGroup>
 </Project>

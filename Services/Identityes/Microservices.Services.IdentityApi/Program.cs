@@ -1,4 +1,4 @@
-using Microservices.Services.Catolog.Rgistrations;
+﻿using Microservices.Services.IdentityApi.Registrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,11 +8,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.MapperRegistration();
 
-builder.Services.Config(builder.Configuration);
-
-builder.Services.ServicesRegistration();
+builder.Services.AddDatabase(builder.Configuration);
 
 var app = builder.Build();
 
@@ -23,8 +20,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseHttpsRedirection();
+
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+

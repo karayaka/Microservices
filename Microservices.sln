@@ -18,6 +18,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{199216
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Shared", "Shared\Microservice.Shared\Microservice.Shared.csproj", "{44DA3284-43E1-4957-BF4F-D1612D9B7BF1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identityes", "Identityes", "{387352B3-487E-466B-A6A1-7257E5853633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Services.IdentityApi", "Services\Identityes\Microservices.Services.IdentityApi\Microservices.Services.IdentityApi.csproj", "{ADA77767-7305-4A09-BBAD-456CECE20D01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,10 @@ Global
 		{44DA3284-43E1-4957-BF4F-D1612D9B7BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44DA3284-43E1-4957-BF4F-D1612D9B7BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44DA3284-43E1-4957-BF4F-D1612D9B7BF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA77767-7305-4A09-BBAD-456CECE20D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA77767-7305-4A09-BBAD-456CECE20D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA77767-7305-4A09-BBAD-456CECE20D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA77767-7305-4A09-BBAD-456CECE20D01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +48,8 @@ Global
 		{D261FD91-01BA-4315-92EF-8333247A294C} = {329623CE-76F1-4926-8A31-3DD219471931}
 		{D9639473-3BF7-4499-9E5D-31A2C119B7BE} = {D261FD91-01BA-4315-92EF-8333247A294C}
 		{44DA3284-43E1-4957-BF4F-D1612D9B7BF1} = {1992168F-EA49-4B9E-AA6E-03BECD587BA7}
+		{387352B3-487E-466B-A6A1-7257E5853633} = {329623CE-76F1-4926-8A31-3DD219471931}
+		{ADA77767-7305-4A09-BBAD-456CECE20D01} = {387352B3-487E-466B-A6A1-7257E5853633}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F09AF2B2-6DE7-45CC-9B35-689341B48A06}

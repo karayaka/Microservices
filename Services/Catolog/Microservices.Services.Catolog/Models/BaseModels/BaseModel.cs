@@ -5,6 +5,13 @@ namespace Microservices.Services.Catolog.Models.BaseModels
 {
     public class BaseModel
     {
+
+        public BaseModel()
+        {
+            CreatedDate = DateTime.UtcNow;
+            UpdateDate = DateTime.UtcNow;
+        }
+
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }

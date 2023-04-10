@@ -1,2 +1,3 @@
 services
 	catologApi=>http://localhost:5011
+	identityApi=>"https://localhost:5012;http://localhost:5013"
