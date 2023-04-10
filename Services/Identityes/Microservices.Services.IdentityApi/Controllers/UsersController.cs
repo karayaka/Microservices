@@ -35,6 +35,7 @@ namespace Microservices.Services.IdentityApi.Controllers
         }
 
         // POST api/values
+        //register mtodu
         [HttpPost]
         public async Task<IActionResult> Post(UserCreateDto model)
         {
@@ -58,6 +59,7 @@ namespace Microservices.Services.IdentityApi.Controllers
         }
 
         // PUT api/values/5
+        //Kuşşanıcı Güncelle ve sil metodları yaılabilir
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {

@@ -29,8 +29,6 @@
     <Folder Include="Models\" />
     <Folder Include="DataContextes\" />
     <Folder Include="Registrations\" />
-    <Folder Include="Dtos\" />
-    <Folder Include="Dtos\UserModels\" />
     <Folder Include="Dtos\BaseModels\" />
   </ItemGroup>
   <ItemGroup>
