@@ -26,6 +26,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStocks", "PhotoStocks"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Services.PhotoStock", "PhotoStocks\Microservices.Services.PhotoStock\Microservices.Services.PhotoStock.csproj", "{6EF1FF08-A03F-43DC-889B-9EBA05CAC960}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Baskets", "Baskets", "{B528FC1F-0850-4BFE-8263-91B957F82FBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Services.Basket", "Baskets\Microservices.Services.Basket\Microservices.Services.Basket.csproj", "{DBA265A8-1147-4007-9471-107CE29C41ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,10 @@ Global
 		{6EF1FF08-A03F-43DC-889B-9EBA05CAC960}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EF1FF08-A03F-43DC-889B-9EBA05CAC960}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EF1FF08-A03F-43DC-889B-9EBA05CAC960}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA265A8-1147-4007-9471-107CE29C41ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA265A8-1147-4007-9471-107CE29C41ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA265A8-1147-4007-9471-107CE29C41ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA265A8-1147-4007-9471-107CE29C41ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +68,8 @@ Global
 		{ADA77767-7305-4A09-BBAD-456CECE20D01} = {387352B3-487E-466B-A6A1-7257E5853633}
 		{64AA1518-E580-4CF0-A8FF-371B408511D4} = {329623CE-76F1-4926-8A31-3DD219471931}
 		{6EF1FF08-A03F-43DC-889B-9EBA05CAC960} = {64AA1518-E580-4CF0-A8FF-371B408511D4}
+		{B528FC1F-0850-4BFE-8263-91B957F82FBA} = {329623CE-76F1-4926-8A31-3DD219471931}
+		{DBA265A8-1147-4007-9471-107CE29C41ED} = {B528FC1F-0850-4BFE-8263-91B957F82FBA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F09AF2B2-6DE7-45CC-9B35-689341B48A06}
