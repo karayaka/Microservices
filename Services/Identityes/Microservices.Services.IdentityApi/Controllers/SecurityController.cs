@@ -23,7 +23,7 @@ namespace Microservices.Services.IdentityApi.Controllers
             userManager = _userManager;
             tS = _tS;
         }
-
+        [HttpPost]
         public async Task<IActionResult> Login(LoginDto model)
         {
             try

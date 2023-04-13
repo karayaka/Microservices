@@ -6,6 +6,7 @@ using Microservice.Shared.BaseResults;
 using Microservices.Services.Catolog.Dtos.DefinationModels;
 using Microservices.Services.Catolog.Models.Definations;
 using Microservices.Services.Catolog.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -36,9 +37,10 @@ namespace Microservices.Services.Catolog.Controllers
                 return ErrorHadling(ex);
             }
         }
-
+        
         // GET api/values/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> Get(string id)
         {
             try

@@ -1,3 +1,4 @@
+using Microservice.Shared.Registrations;
 using Microservices.Services.Catolog.Rgistrations;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.MapperRegistration();
+
+//token resolver
+builder.Services.AddJWTAuthentication(builder.Configuration);
 
 builder.Services.Config(builder.Configuration);
 
@@ -22,6 +26,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
