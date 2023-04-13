@@ -32,7 +32,6 @@
     <Folder Include="DataContextes\" />
     <Folder Include="Registrations\" />
     <Folder Include="Dtos\BaseModels\" />
-    <Folder Include="Dtos\SecurityModels\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>

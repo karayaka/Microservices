@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{32
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catolog", "Catolog", "{D261FD91-01BA-4315-92EF-8333247A294C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Services.Catolog", "Services\Catolog\Microservices.Services.Catolog\Microservices.Services.Catolog.csproj", "{D9639473-3BF7-4499-9E5D-31A2C119B7BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Services.Catolog", "Services\Catolog\Microservices.Services.Catolog\Microservices.Services.Catolog.csproj", "{D9639473-3BF7-4499-9E5D-31A2C119B7BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1B9F701B-FF77-4772-9111-A1E512B9E8DF}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,11 +16,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{1992168F-EA49-4B9E-AA6E-03BECD587BA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Shared", "Shared\Microservice.Shared\Microservice.Shared.csproj", "{44DA3284-43E1-4957-BF4F-D1612D9B7BF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Shared", "Shared\Microservice.Shared\Microservice.Shared.csproj", "{44DA3284-43E1-4957-BF4F-D1612D9B7BF1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identityes", "Identityes", "{387352B3-487E-466B-A6A1-7257E5853633}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Services.IdentityApi", "Services\Identityes\Microservices.Services.IdentityApi\Microservices.Services.IdentityApi.csproj", "{ADA77767-7305-4A09-BBAD-456CECE20D01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Services.IdentityApi", "Services\Identityes\Microservices.Services.IdentityApi\Microservices.Services.IdentityApi.csproj", "{ADA77767-7305-4A09-BBAD-456CECE20D01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStocks", "PhotoStocks", "{64AA1518-E580-4CF0-A8FF-371B408511D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Services.PhotoStock", "PhotoStocks\Microservices.Services.PhotoStock\Microservices.Services.PhotoStock.csproj", "{6EF1FF08-A03F-43DC-889B-9EBA05CAC960}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +44,10 @@ Global
 		{ADA77767-7305-4A09-BBAD-456CECE20D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADA77767-7305-4A09-BBAD-456CECE20D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADA77767-7305-4A09-BBAD-456CECE20D01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EF1FF08-A03F-43DC-889B-9EBA05CAC960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EF1FF08-A03F-43DC-889B-9EBA05CAC960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EF1FF08-A03F-43DC-889B-9EBA05CAC960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EF1FF08-A03F-43DC-889B-9EBA05CAC960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,8 @@ Global
 		{44DA3284-43E1-4957-BF4F-D1612D9B7BF1} = {1992168F-EA49-4B9E-AA6E-03BECD587BA7}
 		{387352B3-487E-466B-A6A1-7257E5853633} = {329623CE-76F1-4926-8A31-3DD219471931}
 		{ADA77767-7305-4A09-BBAD-456CECE20D01} = {387352B3-487E-466B-A6A1-7257E5853633}
+		{64AA1518-E580-4CF0-A8FF-371B408511D4} = {329623CE-76F1-4926-8A31-3DD219471931}
+		{6EF1FF08-A03F-43DC-889B-9EBA05CAC960} = {64AA1518-E580-4CF0-A8FF-371B408511D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F09AF2B2-6DE7-45CC-9B35-689341B48A06}
