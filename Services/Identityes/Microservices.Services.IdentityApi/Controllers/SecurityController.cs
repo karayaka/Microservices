@@ -1,5 +1,4 @@
 using Microservices.Services.IdentityApi.Dtos.UserModels;
-using Microservices.Services.IdentityApi.Dtos.UserModels;
 using Microservices.Services.IdentityApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
