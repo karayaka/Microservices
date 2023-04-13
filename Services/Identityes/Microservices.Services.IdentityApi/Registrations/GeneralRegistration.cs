@@ -1,6 +1,7 @@
 ﻿using System;
 using Microservices.Services.IdentityApi.DataContextes;
 using Microservices.Services.IdentityApi.Models;
+using Microservices.Services.IdentityApi.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,8 @@ namespace Microservices.Services.IdentityApi.Registrations
 				
 			}).AddEntityFrameworkStores<IdentityContext>()
 				.AddDefaultTokenProviders();
+
+			services.AddSingleton<TokenGenerateService>();
 		}
 	}
 }
