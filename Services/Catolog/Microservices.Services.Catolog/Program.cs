@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.MapperRegistration();
 
-//token resolver
+//token resolver!
 builder.Services.AddJWTAuthentication(builder.Configuration);
 
 builder.Services.Config(builder.Configuration);
