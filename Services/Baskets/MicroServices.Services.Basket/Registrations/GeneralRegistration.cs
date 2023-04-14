@@ -1,5 +1,6 @@
 ﻿using MicroServices.Services.Basket.Services;
 using MicroServices.Services.Basket.Settings;
+using Microsoft.Extensions.Options;
 
 namespace MicroServices.Services.Basket.Registrations
 {
@@ -9,9 +10,15 @@ namespace MicroServices.Services.Basket.Registrations
         {
             services.Configure<RedisSettings>(configuration.GetSection("RedisSettings"));
         }
-        public static void DbRegistration(this IServiceCollection services)
+        public static void ServicesRegistration(this IServiceCollection services)
         {
-            services.AddSingleton<RedisService>();
+            services.AddSingleton<RedisService>(sp => 
+            {
+                var redisSetting=sp.GetRequiredService<IOptions<RedisSettings>>().Value;
+                var redis = new RedisService(redisSetting.Host, redisSetting.Port);
+                redis.Connect();
+                return redis;
+            });
         }
     }
 }
