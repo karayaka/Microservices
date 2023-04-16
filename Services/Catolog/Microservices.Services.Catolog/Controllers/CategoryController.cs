@@ -55,7 +55,7 @@ namespace Microservices.Services.Catolog.Controllers
 
         // POST api/values
         [HttpPost]
-        public async Task<IActionResult> Post(CategoryDto model)
+        public async Task<IActionResult> Post([FromBody] CategoryDto model)
         {
             try
             {

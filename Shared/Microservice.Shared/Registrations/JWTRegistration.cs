@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using Microservice.Shared.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,8 @@ namespace Microservice.Shared.Registrations
 
         public static void AddJWTAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddHttpContextAccessor();//Eklendiği Her Projede Context Accesor Aktif Olmalı
+
             var key = Encoding.ASCII.GetBytes(configuration["AppSettings:Token"]);
             services.AddAuthentication(x =>
             {
@@ -28,10 +31,10 @@ namespace Microservice.Shared.Registrations
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
                     ValidateAudience = false,
-
                 };
 
             });
+            services.AddSingleton<IIdentityService, IdentityService>();
         }
         
     }

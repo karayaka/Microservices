@@ -45,6 +45,7 @@ namespace Microservices.Services.IdentityApi.Controllers
                         Surname = user.Surname,
                         Token = tS.JWTTokenGenerate(new()
                         {
+                            Id=user.Id,
                             Email = user.Email,
                             Surname = user.Surname,
                             Name = user.Name,

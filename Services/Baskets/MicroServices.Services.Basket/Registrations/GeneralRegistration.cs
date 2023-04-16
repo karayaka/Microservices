@@ -19,6 +19,7 @@ namespace MicroServices.Services.Basket.Registrations
                 redis.Connect();
                 return redis;
             });
+            services.AddScoped<IBasketService, BasketService>();
         }
     }
 }

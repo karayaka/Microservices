@@ -14,4 +14,9 @@
     <PackageReference Include="StackExchange.Redis" Version="2.6.104" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Microservice.Shared\Microservice.Shared.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
