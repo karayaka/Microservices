@@ -32,6 +32,7 @@ namespace Microservices.Services.Catolog.Services
             }
             catch (Exception ex)
             {
+                //
                 throw ex;
             }
         }
