@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServices.Services.Bask
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices.Services.PhotoStock", "Services\PhotoStocks\Microservices.Services.PhotoStock\Microservices.Services.PhotoStock.csproj", "{F3471F52-E41E-4EC3-96E7-F7152CA687AB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{92376C3D-B49F-43EB-A46A-114311C0AAC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -70,6 +72,7 @@ Global
 		{B528FC1F-0850-4BFE-8263-91B957F82FBA} = {329623CE-76F1-4926-8A31-3DD219471931}
 		{EE71EDD8-E6E0-4F12-914E-6FB51F5265DF} = {B528FC1F-0850-4BFE-8263-91B957F82FBA}
 		{F3471F52-E41E-4EC3-96E7-F7152CA687AB} = {64AA1518-E580-4CF0-A8FF-371B408511D4}
+		{92376C3D-B49F-43EB-A46A-114311C0AAC2} = {329623CE-76F1-4926-8A31-3DD219471931}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F09AF2B2-6DE7-45CC-9B35-689341B48A06}
