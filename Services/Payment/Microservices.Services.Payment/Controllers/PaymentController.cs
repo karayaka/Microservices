@@ -9,7 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Microservices.Services.Payment.Controllers
 {
-    //mşdle ware exception handler test edildi dependesy enjection çalışıyopr!
+    //midlewares ware exception handler test edildi dependesy enjection çalışıyopr!
+
     [Route("api/[controller]")]
     public class PaymentController : Controller
     {
