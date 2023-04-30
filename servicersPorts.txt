@@ -3,3 +3,5 @@ services
 	identityApi=>"https://localhost:5012;http://localhost:5013"
 	photoStock=> "http://localhost:5014"
 	basketApi="http://localhost:5015"
+	orderApi=> "http://localhost:5016"
+	paymentapi=>"http://localhost:5017"

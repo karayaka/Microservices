@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>3679114b-6b0d-4370-b418-4c51bdc73842</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Entitys\" />
+    <None Remove="Enums\" />
+    <None Remove="AggregateRoots\" />
+    <None Remove="ValueObjects\" />
+    <None Remove="AggregateRoots\OrderAggtregate\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entitys\" />
+    <Folder Include="Enums\" />
+    <Folder Include="AggregateRoots\" />
+    <Folder Include="ValueObjects\" />
+    <Folder Include="AggregateRoots\OrderAggtregate\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microservice.Order.Domain\Microservice.Order.Domain.csproj" />
+    <ProjectReference Include="..\..\..\..\Shared\Microservice.Shared\Microservice.Shared.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Microservice.Order.Persistence\Microservice.Order.Persistence.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Dtos\" />
+    <None Remove="Mapping\" />
+    <None Remove="Queries\" />
+    <None Remove="Handlers\" />
+    <None Remove="Commands\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dtos\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="Queries\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Commands\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+</Project>
