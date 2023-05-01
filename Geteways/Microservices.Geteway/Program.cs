@@ -1,5 +1,5 @@
-﻿using Microservice.Shared.Registrations;
-using Microservices.Services.Payment.Middlewares;
+﻿using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddJWTAuthentication(builder.Configuration);
+builder.Configuration.AddJsonFile($"configuration.{builder.Environment.EnvironmentName}.json",optional:false,reloadOnChange:true);
+
+builder.Services.AddOcelot(builder.Configuration);
 
 var app = builder.Build();
 
@@ -21,14 +23,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
-app.UseMiddleware<ExceptionHandlerMiddleware>();
-
-app.UseAuthentication();
-
 app.UseAuthorization();
 
 app.MapControllers();
+
+await app.UseOcelot();
 
 app.Run();
 

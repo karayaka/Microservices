@@ -5,3 +5,5 @@ services
 	basketApi="http://localhost:5015"
 	orderApi=> "http://localhost:5016"
 	paymentapi=>"http://localhost:5017"
+Geteways
+	geteway=>"http://localhost:5000"
