@@ -45,12 +45,12 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 5016
+          "Port": 5017
         }
       ],
       "UpstreamPathTemplate": "/services/fakepayment/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-      "UpstreamScheme": "http",
+      "UpstreamScheme": "http"
     }
   ],
   "GlobalConfiguration": {

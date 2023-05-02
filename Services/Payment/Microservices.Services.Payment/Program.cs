@@ -1,5 +1,6 @@
 ﻿using Microservice.Shared.Registrations;
 using Microservices.Services.Payment.Middlewares;
+using Microservices.Services.Payment.Registrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddJWTAuthentication(builder.Configuration);
+
+builder.Services.RabitMqRegistration(builder.Configuration);
 
 var app = builder.Build();
 

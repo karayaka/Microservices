@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MassTransit;
+using Microservice.Shared.Messages;
 using Microservices.Services.Payment.Exceptions;
+using Microservices.Services.Payment.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,12 +18,19 @@ namespace Microservices.Services.Payment.Controllers
     [Route("api/[controller]")]
     public class PaymentController : Controller
     {
+        private readonly ISendEndpointProvider sendProvider;
+
+        public PaymentController(ISendEndpointProvider _sendProvider)
+        {
+            sendProvider = _sendProvider;
+        }
+
         // GET: api/values
         [HttpGet]
         public IActionResult Get()
         {
 
-            //throw new NotFoundException("Text HAtası");
+            
 
             return Ok();
 
@@ -35,7 +45,16 @@ namespace Microservices.Services.Payment.Controllers
 
         // POST api/values
         [HttpPost]
-        public IActionResult Post([FromBody]string value) =>Ok();
+        public async Task<IActionResult> Post([FromBody]PaymentDto model)
+        {
+            var send = await sendProvider.GetSendEndpoint(new Uri("queue:create-order-service"));
+
+            var orderCreate = new CreateOrderMessageComment();
+            orderCreate.RmqTestMessages = model.RmqMessage;
+            ///sipariş detayları burda oluşturulack
+            await send.Send(orderCreate);
+            return Ok("ödendi");
+        }
         
 
     }

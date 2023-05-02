@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.15" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,12 +17,16 @@
     <None Remove="Middlewares\" />
     <None Remove="Exceptions\" />
     <None Remove="Dtos\" />
+    <None Remove="Models\" />
+    <None Remove="Registrations\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Middlewares\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Dtos\" />
+    <Folder Include="Models\" />
+    <Folder Include="Registrations\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Shared\Microservice.Shared\Microservice.Shared.csproj">
