@@ -15,7 +15,7 @@ namespace Microservice.Order.Application.Registrations
             services.AddMassTransit(x =>
             {
                 x.AddConsumer<CreateOrderMessageCommentConsumer>();
-
+                x.AddConsumer<CourseNameChangeEventCounsumer>();
                 x.UsingRabbitMq((context, cfg) =>
                 {
                     cfg.Host(configuration["RabitMqUrl"], "/", host =>
@@ -27,6 +27,12 @@ namespace Microservice.Order.Application.Registrations
                     cfg.ReceiveEndpoint("create-order-service", e =>
                     {
                         e.ConfigureConsumer<CreateOrderMessageCommentConsumer>(context);
+
+                    });
+                    cfg.ReceiveEndpoint("course-event-change-name", e =>
+                    {
+                        e.ConfigureConsumer<CourseNameChangeEventCounsumer>(context);
+
                     });
                 });
             });

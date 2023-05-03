@@ -79,7 +79,7 @@ namespace Microservices.Services.Catolog.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(CourseCreateDto model)
+        public async Task<IActionResult> Put([FromBody]CourseCreateDto model)
         {
             try
             {

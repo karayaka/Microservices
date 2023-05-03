@@ -8,15 +8,21 @@
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="Consumers\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="StackExchange.Redis" Version="2.6.104" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.15" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Shared\Microservice.Shared\Microservice.Shared.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Consumers\" />
   </ItemGroup>
 </Project>

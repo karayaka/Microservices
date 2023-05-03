@@ -1,4 +1,6 @@
-﻿using MicroServices.Services.Basket.Services;
+﻿using MassTransit;
+using MicroServices.Services.Basket.Consumers;
+using MicroServices.Services.Basket.Services;
 using MicroServices.Services.Basket.Settings;
 using Microsoft.Extensions.Options;
 
@@ -20,6 +22,29 @@ namespace MicroServices.Services.Basket.Registrations
                 return redis;
             });
             services.AddScoped<IBasketService, BasketService>();
+        }
+        public static void RabitMqRegistration(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddMassTransit(x =>
+            {
+                x.AddConsumer<CourseNameChangeEventCounsumer>();
+
+                x.UsingRabbitMq((context, cfg) =>
+                {
+                    cfg.Host(configuration["RabitMqUrl"], "/", host =>
+                    {
+                        host.Username("guest");
+                        host.Password("guest");
+                    });
+                    //kuyruk oluşuyor
+                    cfg.ReceiveEndpoint("course-event-change-name-basket", e =>
+                    {
+                        e.ConfigureConsumer<CourseNameChangeEventCounsumer>(context);
+
+                    });
+                });
+
+            });
         }
     }
 }

@@ -24,6 +24,7 @@ namespace Microservices.Services.Payment.Middlewares
 			{
 				//request loging
                 await next.Invoke(context);
+				//response loging
             }
 			catch (Exception eror)
 			{

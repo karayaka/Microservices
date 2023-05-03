@@ -1,6 +1,8 @@
 ﻿using System;
 using AutoMapper;
+using MassTransit;
 using Microservice.Shared.Exceptions;
+using Microservice.Shared.Messages;
 using Microservices.Services.Catolog.Configs;
 using Microservices.Services.Catolog.Dtos.CourseModels;
 using Microservices.Services.Catolog.Models.Courses;
@@ -14,10 +16,12 @@ namespace Microservices.Services.Catolog.Services
         private readonly IMongoCollection<Course> _courseColletion;
         private readonly ICategoryService _categoryService;
         private readonly IMapper _mapper;
+        private readonly IPublishEndpoint _publishEndpoind;
 
         public CourseService(
             ICategoryService categoryService,
             IMapper mapper,
+            IPublishEndpoint publishEndpoind,
             DatabaseSetting setting)
 		{
             var cliend = new MongoClient(setting.ConnectionString);
@@ -26,6 +30,7 @@ namespace Microservices.Services.Catolog.Services
                 setting.CourseCollectionName);
             _mapper = mapper;
             _categoryService = categoryService;
+            _publishEndpoind = publishEndpoind;
         }
 
         public async Task<List<CourseDto>> GetAllCourse()
@@ -101,6 +106,7 @@ namespace Microservices.Services.Catolog.Services
         {
             try
             {
+
                 var course = await (await _courseColletion.FindAsync(t => t.Id == model.Id)).FirstOrDefaultAsync();
 
                 var updatedCourse = _mapper.Map<CourseCreateDto, Course>(model, course);
@@ -108,6 +114,12 @@ namespace Microservices.Services.Catolog.Services
                 var result= await _courseColletion.FindOneAndReplaceAsync(t => t.Id == model.Id, updatedCourse);
                 if (result == null)
                     throw new CusEx("Güncellenecek kurs bulunamadı", Code: 404);
+
+                await _publishEndpoind.Publish<CourseNameChangeEvent>(new CourseNameChangeEvent()
+                {
+                    CourseId=updatedCourse.Id,
+                    UpdatedName=updatedCourse.Name,
+                });
             }
             catch (Exception ex)
             {

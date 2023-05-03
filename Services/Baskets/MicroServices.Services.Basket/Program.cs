@@ -9,6 +9,8 @@ builder.Services.SettingRegistration(builder.Configuration);
 
 builder.Services.ServicesRegistration();
 
+builder.Services.RabitMqRegistration(builder.Configuration);
+
 builder.Services.AddControllers();
 
 builder.Services.AddJWTAuthentication(builder.Configuration);

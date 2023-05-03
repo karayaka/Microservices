@@ -1,6 +1,6 @@
 services
 	catologApi=>http://localhost:5011
-	identityApi=>"https://localhost:5012;http://localhost:5013"
+	identityApi=>"http://localhost:5018"
 	photoStock=> "http://localhost:5014"
 	basketApi="http://localhost:5015"
 	orderApi=> "http://localhost:5016"

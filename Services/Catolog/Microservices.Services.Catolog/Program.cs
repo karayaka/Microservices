@@ -11,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.MapperRegistration();
 
+builder.Services.RabitMqRegistration(builder.Configuration);
+
 //token resolver!
 builder.Services.AddJWTAuthentication(builder.Configuration);
 
